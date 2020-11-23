@@ -1,0 +1,89 @@
+body{
+    background-color: #3b3b3b;
+    color: #c7c7c7;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+#menu{
+    display: flex;
+    white-space: nowrap;
+}
+#menu h1{
+    display: inline-block;
+    text-align: left;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 30%;
+}
+#menu #menubar{
+    display: inline;
+    margin-left: auto;
+    text-align: right;
+    vertical-align: sub;
+    
+}
+
+
+.ImageDisplay{
+    display: block;
+    text-align: center;
+    
+}
+.ImageDisplay img{
+    height: 70vh;
+}
+
+#SwitchContainer{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10vw;
+
+}
+#ImageSwitch{
+    display: flex;
+    width: 10vw;
+    justify-content: center;
+}
+.ChangeButton{
+    width: 5vw;
+    text-align: center;
+}
+#ImageSwitch #PreviousImg{
+    display: block;
+    margin-right: auto;
+}
+#ImageSwitch #NextImg{
+    display: block;
+    margin-left: auto;
+}
+#FullScreenBg{
+    position: fixed;
+    z-index: 1;
+    display: none;
+    background-color: #3b3b3b;
+    margin:auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    
+}
+#FullScreenImg {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: none;
+    height: 100vh;
+    box-shadow: 0 0 20px 10px #00000063;
+}

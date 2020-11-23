@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="/static/icon.png" type="image/x-icon">
+    <title>IA Photography</title>
+<script src="/static/img_visibility.js"> 
+</script>
+
+</head>
+<body>
+    <img src="/static/{{IMG}}.jpg" id="FullScreenImg" onmouseout="fullscreen('Out')">
+    <div id="FullScreenBg"></div>
+    <div id="menu">
+        <h1>IA Photography</h1>
+        <!-- Table and Logout have no function yet -->
+        <table id="menubar">
+            <tr>
+                <td>Logout</td>
+            </tr>
+        </table>
+        
+    </div>
+    <!-- Use this div to dynamically (Jinja) generate hidden title fields for each image -->
+    <div class="ImageDisplay" id="ImageDisplayWrapper">
+        {% for dict_item in IMGTITLES %}
+            {% for key, value in dict_item.items() %}
+                <div id="HiddenNames{{key}}" style="display: none;">{{value}}</div>
+            {% endfor %}
+        {% endfor %}
+        <h3 id="ImageTitle">{{IMGTITLE[IMG]}}</h3>
+        <img id ="DisplayedImg" src="/static/{{IMG}}.jpg" onmouseover="fullscreen('In')">
+        <div id="SwitchContainer">
+            <div id="ImageSwitch">
+                <button id="PreviousImg" class="ChangeButton" onclick="imagechoice('Previous')">Previous</button>
+                <button id="NextImg" class="ChangeButton" onclick="imagechoice('Next')">Next</button>
+            </div>
+        </div>
+    </div>
+
+        
+       
+</body>
+</html>
