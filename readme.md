@@ -1,5 +1,5 @@
 # IAGallery<br>
-###A collection of pages to create a Flask-based single-page application for image viewing.
+### A collection of pages to create a Flask-based single-page application for image viewing.
 
 To use the contents of these pages natively, create a parent directory with whatever name you choose.<br>
 Save "IAGallery.py" in this folder.<br>
